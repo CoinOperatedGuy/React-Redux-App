@@ -11,6 +11,7 @@ export const getQuote = () => dispatch => {
     .get("https://programming-quotes-api.herokuapp.com/quotes/random")
     .then(res => {
       console.log("res", res.data.en);
+      console.log(res.data);
       dispatch({ type: FETCHING_QUOTE_SUCCESS, payload: res.data.en });
     })
     .catch(err => {

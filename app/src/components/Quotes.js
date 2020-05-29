@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 
 import { getQuote } from "../store/actions";
@@ -11,7 +11,7 @@ const Quotes = ({ getQuote, quote, isFetching, error }) => {
   if (error) {
     return <h2>{error}</h2>;
   }
-
+  
   return (
     <div className='quote'>
       <h2>Quote: {quote}</h2>
